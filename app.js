@@ -94,6 +94,11 @@ app.use((req, res, next) => {
 //     res.send(registeredUser);
 // });
 
+app.get("/", (req, res) => {
+    res.send("Your app is live!");
+});
+
+
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
